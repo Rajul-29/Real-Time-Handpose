@@ -54,36 +54,51 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Webcam
-          ref={webcamRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
-
-        <canvas
-          ref={canvasRef}
-          style={{
-            position: "absolute",
-            marginLeft: "auto",
-            marginRight: "auto",
-            left: 0,
-            right: 0,
-            textAlign: "center",
-            zindex: 9,
-            width: 640,
-            height: 480,
-          }}
-        />
+        <h1>Real-Time Handpose Estimation</h1>
+        <p>
+          This project demonstrates real-time handpose estimation using TensorFlow.js and React.js
+        </p>
       </header>
+
+      <div className="main-container">
+        <div className="camera-container">
+          <Webcam
+            ref={webcamRef}
+            className="webcam"
+          />
+          <canvas
+            ref={canvasRef}
+            className="canvas"
+          />
+        </div>
+      </div>
+
+      <footer className="App-footer">
+        <p style={{textAlign: "center"}}>Created by Rajul Chaudhary</p>
+        <a
+          href="https://github.com/Rajul-29"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            alt="GitHub"
+            style={{ width: "30px", height: "30px", marginRight: "15px" }}
+          />
+        </a>
+
+        <a
+          href="https://linkedin.com/in/rajul-chaudhary-882a72261"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+            alt="LinkedIn"
+            style={{ width: "30px", height: "30px"}}
+          />
+        </a>
+      </footer>
     </div>
   );
 }
