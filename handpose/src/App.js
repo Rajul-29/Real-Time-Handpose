@@ -62,14 +62,12 @@ function App() {
 
       <div className="main-container">
         <div className="camera-container">
-          <Webcam
-            ref={webcamRef}
-            className="webcam"
-          />
-          <canvas
-            ref={canvasRef}
-            className="canvas"
-          />
+        <h2>Your Webcam</h2>
+          <Webcam ref={webcamRef} className="webcam" />
+        </div>
+        <div className="projection-container">
+          <h2>Hand Projection</h2>
+          <canvas ref={canvasRef} className="projection-canvas" />
         </div>
       </div>
 
